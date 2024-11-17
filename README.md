@@ -1,5 +1,7 @@
 # Redis Experiments
 
+## Project Setup
+
 Start redis using - 
 
 ```bash
