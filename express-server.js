@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const redis_client = require("./redis-client");
+
 app.get("/", async (req, res) => {
   const cache_value = await redis_client.get("msg:1");
   if (cache_value) {
@@ -10,6 +11,7 @@ app.get("/", async (req, res) => {
     res.send("Hello, World!");
   }
 });
+
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
