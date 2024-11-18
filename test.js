@@ -6,4 +6,5 @@ async function init() {
   console.log(result);
   redis_client.quit();
 }
+
 init();
