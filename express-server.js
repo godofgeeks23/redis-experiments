@@ -10,7 +10,7 @@ app.get("/", async (req, res) => {
     res.send(cache_value);
   } else {
     redis_client.set("msg:1", "Hello, World!");
-    res.send("Hello, World!");
+    res.send("Value not found in cache, setting it now.");
   }
 });
 
