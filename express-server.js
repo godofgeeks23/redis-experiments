@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const redis_client = require("./redis-client");
 
+const port = 3000;
 
 app.get("/", async (req, res) => {
   // get value of key "msg:1" from redis
@@ -15,5 +16,5 @@ app.get("/", async (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log("Server running on port 3000");
+  console.log("Server running on port ", port);
 });
